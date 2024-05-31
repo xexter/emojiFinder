@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #b92b27; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1565c0,
+    #b92b27,
+    #1565c0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1565c0,
+    #b92b27,
+    #1565c0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.emojis {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.emoji {
+  background: rgba(255, 255, 255, 0.2);
+  width: 350px;
+  height: 80px;
+  display: grid;
+  grid-template-columns: 70px auto;
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+}
+.icon {
+  grid-row: span 2;
+  font-size: 50px;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: cursive;
+  text-transform: capitalize;
+}
+.desc {
+  color: rgb(213, 207, 207);
+  font-style: italic;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  text-shadow: 0px 0px 5px red;
+  font-size: 50px;
+  padding: 30px;
+}
+.search {
+  width: 40%;
+}
+.search input {
+  width: 70%;
+  padding: 10px 5px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid white;
+  outline: none;
+  color: white;
+  /* box-shadow: 0px 0px 4px 3px red; */
+}
+.search input::placeholder {
+  color: white;
+}
+.search button {
+  position: relative;
+  top: 1px;
+  height: 48px;
+  left: -62px;
+  width: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .heading {
+    flex-direction: column;
+    font-size: 40px;
+  }
+  .search {
+    width: 100%;
+    display: flex;
+  }
+  .search input {
+    width: 80%;
+    margin: auto;
+    margin: 20px;
+  }
+  .search button {
+    position: relative;
+    top: 19px;
+    height: 48px;
+    left: -50px;
+    width: 50px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
